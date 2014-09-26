@@ -1,3 +1,9 @@
+# Wordpress Starter Kit
+
+A starter kit for Wordpress projects.
+
+## Install
+
 Plugins:
 
 - Advanced Custom Fields Pro
@@ -10,14 +16,14 @@ Plugins:
 
 Permalinks:
 
-- Custom Structure - /articles/%postname%/
+- Custom Structure - `/articles/%postname%/`
 - Category base - archives
 - Tag base - tags
 
 wp-config:
 
-- Revisions - define('WP_POST_REVISIONS', 5);
-- Disable Editor - define('DISALLOW_FILE_EDIT', true);
+- Revisions - `define('WP_POST_REVISIONS', 5);`
+- Disable Editor - `define('DISALLOW_FILE_EDIT', true);`
 
 After Launch:
 
@@ -36,7 +42,7 @@ After Launch:
 
 Known Issues:
 
-- Gravity forms causes jQuery to load in <head> rather than footer. Most likely to not break conditional statements.
+- Gravity forms causes jQuery to load in `<head>` rather than the footer. Most likely done to not break conditional form statements.
 
 TODO:
 
