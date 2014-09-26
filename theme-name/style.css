@@ -1,0 +1,286 @@
+/*
+	Theme Name: Theme Name
+	Theme URI: 
+	Description: 
+	Version: 1.0.0
+	Author: Sean Kennedy @seankau
+	Author URI: http://seankennedy.com.au/
+*/
+
+/*=============================================================================
+  Base
+  ========================================================================== */
+	
+	body {
+		background-color: #fff;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 1em;
+		line-height: 1.5em;
+		font-weight: 300;
+		color: #333;
+	}
+	
+	/* Headings
+	---------------------------------------- */
+	
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	
+	/* Links
+	---------------------------------------- */
+	
+	a, a:visited {
+		text-decoration: none;
+	}
+	
+	a:hover {
+		text-decoration: none;
+	}
+	
+	/* Text Selection
+	---------------------------------------- */
+	
+	::selection {
+		background: #B4D5FF;
+		text-shadow: none;
+	}
+	
+	::-webkit-selection {
+		background: #B4D5FF;
+		text-shadow: none;
+	}
+	
+	::-moz-selection {
+		background: #B4D5FF;
+		text-shadow: none;
+	}	
+
+/*=============================================================================
+  Global Layout
+  ========================================================================== */
+  
+ 	/* Wraps
+	---------------------------------------- */
+	
+	.wrap {
+		margin: 0 auto;
+		max-width: 1200px;
+		padding: 0 30px;
+	}
+				
+	/* Header
+	---------------------------------------- */
+	
+	.header {
+		background: #999;
+	}
+	
+	/* Logo
+	---------------------------------------- */
+		
+	.logo {
+		float: left;
+	}
+	
+		.logo img {
+			display: block;
+			margin: 0;
+		}
+	
+	/* Content
+	---------------------------------------- */
+	
+	.body-container {
+		padding: 1px 0;
+	}
+
+	.body-content {
+		
+	}
+	
+		.body-content > ul,
+		.body-content > ol {
+			margin-left: 40px;
+		}
+	
+	/* Sidebar
+	---------------------------------------- */
+	
+	.sidebar {
+		
+	}
+	
+	/* Footer
+	---------------------------------------- */
+	
+	.footer {
+		
+	}
+	
+/*=============================================================================
+  Pages
+  ========================================================================== */
+  
+  	
+
+/*=============================================================================
+  Modules
+  ========================================================================== */
+  	
+  	
+  	
+/*=============================================================================
+  Navigation
+  ========================================================================== */
+  	
+ 	/* Desktop Navigation
+	---------------------------------------- */
+	
+	.desktop-nav .nav {
+		float: right;
+	}
+	
+	.desktop-nav .nav-list a,
+	.desktop-nav .nav-list a:visited {
+		padding: 19px 10px;
+		color: #333;
+	}
+	
+	/* 2nd Tier */
+	
+	.desktop-nav .nav-list .sub-menu a,
+	.desktop-nav .nav-list .sub-menu a:visited {
+	    background: #ccc;
+	    color: #333;
+	    padding: 0.5em 1em;
+	}
+
+	/* 3rd Tier */
+	
+	.desktop-nav .nav-list .sub-menu .sub-menu a,
+	.desktop-nav .nav-list .sub-menu .sub-menu a:visited {
+	    background: #ddd;
+	    color: #333;
+	    padding: 0.5em 1em;
+	}
+	
+ 	/* Mobile Navigation
+	---------------------------------------- */
+	
+	.mobile-nav #jPanelMenu-menu {
+		background: #333;
+	}
+	
+	.mobile-nav .nav-list a {
+		background: #333;
+		color: #fff;
+		padding: 15px 20px;
+		border-bottom: 1px solid #444;
+	}
+	
+	/* Current Item */
+	
+	.mobile-nav .nav-list .current-menu-item > a:before,
+	.mobile-nav .nav-list .sub-menu .current-menu-item > a:before {
+		width: 4px;
+		background: slategrey;
+	}
+	
+	/* 2nd Tier */
+	
+	.mobile-nav .nav-list .sub-menu a {
+		background: #292929;
+	}
+	
+	/* 3rd Tier */
+		
+	.mobile-nav .nav-list .sub-menu .sub-menu a {
+		background: #212121;
+	}
+	
+ 	/* Sub Menu Trigger
+	---------------------------------------- */
+	
+	.mobile-nav .sub-menu-trigger {
+		border-left: 1px solid #444;
+	}
+	
+	.mobile-nav .sub-menu-trigger i {
+		color: #fff;
+	}
+	
+	/* 2nd Tier */
+	
+	.mobile-nav .sub-menu .sub-menu-trigger {
+		background: #292929;
+	}
+	
+ 	/* Nav Trigger
+	---------------------------------------- */
+	
+	.mobile-nav .nav-trigger {
+		margin-right: -30px;
+	}
+	
+	.mobile-nav .nav-trigger i {
+		color: #333;
+	}
+  	
+/*=============================================================================
+  Overrides and Hacks
+  ========================================================================== */
+  
+  	
+
+/*=============================================================================
+  Media Queries
+  ========================================================================== */
+
+	@media only screen and (max-width: 420px) {
+		
+		/* Wraps */
+		
+		.wrap {
+			padding: 0 15px;
+		}
+		
+		/* Nav Trigger */
+		
+		.mobile-nav .nav-trigger {
+			margin-right: -15px;
+		}
+		
+	}
+	
+	@media only screen and (max-width: 320px) {
+		
+		
+		
+	}
+
+/*=============================================================================
+  Helpers
+  ========================================================================== */
+	
+	/* Input focus styles */
+	/**/
+
+/*==========================================================================
+  Print styles
+  ========================================================================== */
+
+	/*@media print {
+		* {background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important;}
+		a,a:visited {text-decoration:underline;}
+		a[href]:after {content:" (" attr(href) ")";}
+		abbr[title]:after {content:" (" attr(title) ")";}
+		.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after {content:"";}
+		pre,blockquote {border:1px solid #999;page-break-inside:avoid;}
+		thead {display:table-header-group;}
+		tr,img {page-break-inside:avoid;}
+		img {max-width:100% !important;}
+		@page {margin:0.5cm;}
+		p,h2,h3 {orphans:3;widows:3;}
+		h2,h3 {page-break-after:avoid;}
+	}*/
