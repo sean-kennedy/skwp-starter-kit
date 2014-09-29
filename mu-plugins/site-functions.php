@@ -254,5 +254,26 @@
 	    flush_rewrite_rules();
 	    
 	}
+	
+/*
+ * ========================================================================
+ *
+ *	Shortcodes
+ *
+ * ========================================================================
+ */
+ 	
+	/**
+	 *	Example shortcode to use get_template_part
+	 */
+ 	//add_shortcode('example_shortcode', 'skwp_template_shortcode');
+	
+	function skwp_template_shortcode($attr) {
+	
+	    ob_start();
+	    get_template_part('shortcodes/timeline');
+	    return ob_get_clean();
+	    
+	}
 
 ?>
