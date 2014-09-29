@@ -4,7 +4,7 @@ A starter kit for Wordpress projects.
 
 ## Install
 
-Plugins:
+Install Plugins:
 
 - Advanced Custom Fields Pro
 - Relevanssi - Add search logging excluding master
@@ -14,13 +14,13 @@ Plugins:
 - Gravity Forms
 - Velvet Blues Update URLs
 
-Permalinks:
+Update Permalinks:
 
 - Custom Structure - `/articles/%postname%/`
 - Category base - archives
 - Tag base - tags
 
-wp-config:
+Update wp-config:
 
 - Revisions - `define('WP_POST_REVISIONS', 5);`
 - Disable Editor - `define('DISALLOW_FILE_EDIT', true);`
@@ -28,7 +28,6 @@ wp-config:
 After Launch:
 
 - Turn on Relevanssi search logging
-- robots.txt
 - Add custom fields to index in Relevanssi
 - Turn on backups in iThemes Security
 - Check iThemes Security settings
@@ -46,8 +45,5 @@ Known Issues:
 
 TODO:
 
-- Refactor Core Wordpress CSS styles
 - Refactor print styles
-- Refactor Helpers
 - Add accordion and tab bar default JS + CSS (Shortcode)
-- Clean up form styles and js
