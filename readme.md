@@ -38,6 +38,8 @@ After Launch:
 - Add minify plugin
 - Update robots.txt sitemap URL
 - Turn off WP_DEBUG mode
+- Add favicon.ico
+- White label logos for Wordpress (Whitelabel CMS plugin)
 
 Known Issues:
 
