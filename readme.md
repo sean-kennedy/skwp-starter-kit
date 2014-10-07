@@ -24,6 +24,7 @@ Update wp-config:
 
 - Revisions - `define('WP_POST_REVISIONS', 5);`
 - Disable Editor - `define('DISALLOW_FILE_EDIT', true);`
+- Allow direct file I/O - `define('FS_METHOD', 'direct');`
 
 After Launch:
 
