@@ -51,7 +51,11 @@
 		}
 		 
 		private function hide_if_not_published(&$item) {
-			return get_post_status($item->object_id) === 'publish';
+			if ($item->object === 'page') {
+				return get_post_status($item->object_id) === 'publish';
+			} else {
+				return true;
+			}
 		}
 	 
 	}
