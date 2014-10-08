@@ -1,4 +1,4 @@
-$(function() {
+(function() {
 	
 	// Responsive Menu
 	$('.js-nav-list').responsiveMenu();
@@ -9,4 +9,4 @@ $(function() {
 	// Heapbox
 	$('select').heapbox();
 
-});
+})();
