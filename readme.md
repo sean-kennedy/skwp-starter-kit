@@ -13,6 +13,10 @@ Install Plugins:
 - CMS Tree Page View
 - Gravity Forms
 - Velvet Blues Update URLs
+- White Label CMS
+- Autoptimize (minification)
+- EM Object Cache (query cache)
+- Live Edit (front-end editing)
 
 Update Permalinks:
 
@@ -41,10 +45,6 @@ After Launch:
 - Turn off WP_DEBUG mode
 - Add favicon.ico
 - White label logos for Wordpress (Whitelabel CMS plugin)
-
-Known Issues:
-
-- Gravity forms causes jQuery to load in `<head>` rather than the footer. Most likely done to not break conditional form statements.
 
 TODO:
 
