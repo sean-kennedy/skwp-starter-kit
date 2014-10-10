@@ -29,7 +29,7 @@
  * ========================================================================
  */
 
-	add_action('init','skwp_change_author_permalinks');
+	//add_action('init','skwp_change_author_permalinks');
 	
 	function skwp_change_author_permalinks() {
 	
