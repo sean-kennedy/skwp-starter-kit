@@ -3,6 +3,7 @@
 #AuthUserFile /var/www/.htpasswd
 #Require valid-user
 
+# BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
@@ -11,6 +12,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
+
+# END WordPress
 
 # Apache Server Configs v1.1.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
