@@ -4,6 +4,22 @@ A starter kit for Wordpress projects.
 
 ## Install
 
+Update wp-config:
+
+Revisions, Disable Editor,Allow direct file I/O
+
+```
+define('WP_POST_REVISIONS', 5);
+define('DISALLOW_FILE_EDIT', true);
+define('FS_METHOD', 'direct');
+```
+
+Update Permalinks:
+
+- Custom Structure - `/articles/%postname%/`
+- Category base - archives
+- Tag base - tags
+
 Install Plugins:
 
 - Advanced Custom Fields Pro
@@ -18,18 +34,6 @@ Install Plugins:
 - EM Object Cache (query cache)
 - Live Edit (front-end editing)
 
-Update Permalinks:
-
-- Custom Structure - `/articles/%postname%/`
-- Category base - archives
-- Tag base - tags
-
-Update wp-config:
-
-- Revisions - `define('WP_POST_REVISIONS', 5);`
-- Disable Editor - `define('DISALLOW_FILE_EDIT', true);`
-- Allow direct file I/O - `define('FS_METHOD', 'direct');`
-
 After Launch:
 
 - Turn on Relevanssi search logging
@@ -40,7 +44,6 @@ After Launch:
 - Update URLs
 - Webmaster tools linked to Yoast SEO
 - Submit XML sitemap
-- Add minify plugin
 - Update robots.txt sitemap URL
 - Turn off WP_DEBUG mode
 - Add favicon.ico
