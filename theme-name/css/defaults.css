@@ -427,6 +427,22 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 /*=============================================================================
   WordPress Core CSS Styles
   ========================================================================== */
+  
+	/* Responsive Images
+	---------------------------------------- */
+	
+	img[class*="align"],
+	img[class*="wp-image-"] {
+	    height: auto;
+	}
+	
+	img.size-full {
+	    max-width: 100%;
+	    width: auto;
+	}
+	
+	/* Alignment
+	---------------------------------------- */
    
 	.alignnone,
 	a img.alignnone {
