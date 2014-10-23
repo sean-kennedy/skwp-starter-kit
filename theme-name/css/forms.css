@@ -72,7 +72,7 @@
 	.icheckbox:before,
 	.iradio:before {
 		position: relative;
-		top: -5px;
+		top: -3px;
 	    font-size: 18px;
 	    font-family: FontAwesome;
 	    font-style: normal;
