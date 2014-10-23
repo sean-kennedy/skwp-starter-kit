@@ -49,6 +49,10 @@ After Launch:
 - Add favicon.ico
 - White label logos for Wordpress (Whitelabel CMS plugin)
 
+Known Issues:
+
+- EM Object Cache in FileCache mode conflicts with ACF admin edit screen. To make changes to ACF fields disable FileCache mode.
+
 TODO:
 
 - Refactor print styles
