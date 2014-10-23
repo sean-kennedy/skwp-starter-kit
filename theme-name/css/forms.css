@@ -72,7 +72,7 @@
 	.icheckbox:before,
 	.iradio:before {
 		position: relative;
-		top: -3px;
+		top: -5px;
 	    font-size: 18px;
 	    font-family: FontAwesome;
 	    font-style: normal;
@@ -133,7 +133,7 @@
 	.heapBox .holder {
 		min-width: 200px;
 		overflow: hidden;
-		border: 1px solid #777;
+		border: 1px solid #cfcfcf;
 		height: 35px;
 		padding: 0 10px;
 		line-height: 35px;
@@ -150,16 +150,16 @@
 		display: block;
 		width: 26px;
 		height: 35px;
-		border-top: 1px solid #777;
-		border-right: 1px solid #777;
-		border-bottom: 1px solid #777;	
+		border-top: 1px solid #cfcfcf;
+		border-right: 1px solid #cfcfcf;
+		border-bottom: 1px solid #cfcfcf;	
 	}
 	
 	.heapBox .handler:before {
 		position: relative;
 		top: -1px;
 		left: 8px;
-		color: #777;
+		color: #bbb;
 		content: "\f0d7";
 	    font-family: FontAwesome;
 	    font-style: normal;
@@ -189,7 +189,7 @@
 		overflow: hidden;
 		z-index: 20;
 		position: relative;
-		border-bottom: 1px solid #777;
+		border-bottom: 1px solid #cfcfcf;
 	}
 		
 		.heapBox .heapOption {
@@ -202,7 +202,7 @@
 			.heapBox .heapOption a {
 				width: 100%;
 				display: block;
-				border: 1px solid #777;
+				border: 1px solid #cfcfcf;
 				background: #fff;
 				padding: 0 10px;
 			}
@@ -212,7 +212,7 @@
 				}
 			
 				.heapBox .heapOption a.selected {
-					background: #ccc;
+					background: #dfdfdf;
 				}
 			
 				.heapBox .heapOption a.disabled {
