@@ -47,6 +47,7 @@ After Launch:
 - Turn off WP_DEBUG mode
 - Add favicon.ico
 - White label logos for Wordpress (Whitelabel CMS plugin)
+- Resave ACF groups to ensure cache has been written to acf-cache folder
 
 Known Issues:
 
