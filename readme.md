@@ -6,7 +6,7 @@ A starter kit for Wordpress projects.
 
 Update wp-config:
 
-Revisions, Disable Editor, Allow direct file I/O
+Revisions, Disable Editor
 
 ```
 define('WP_POST_REVISIONS', 5);
