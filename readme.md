@@ -6,12 +6,11 @@ A starter kit for Wordpress projects.
 
 Update wp-config:
 
-Revisions, Disable Editor,Allow direct file I/O
+Revisions, Disable Editor, Allow direct file I/O
 
 ```
 define('WP_POST_REVISIONS', 5);
 define('DISALLOW_FILE_EDIT', true);
-define('FS_METHOD', 'direct');
 ```
 
 Update Permalinks:
