@@ -165,7 +165,7 @@
 		  		// Hack to stop mobile nav flashing on page load for iDevices
 		  		setTimeout(function(){
 		  			$('.mobile-nav ' + jpmMenuContainer).css('opacity','1');
-		  			$('.mobile-nav .current-page-ancestor > .sub-menu').slideToggle(0);
+		  			$('.mobile-nav ' + jpmMenuContainer + ' .current-page-ancestor > .sub-menu').slideToggle(0);
 		  		}, 300);
 		  		
 		  		// Invert arrow for current menu item
