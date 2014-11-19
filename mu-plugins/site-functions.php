@@ -116,6 +116,35 @@
 /*
  * ========================================================================
  *
+ *	ACF: Components Shortcode
+ *
+ *	@desc Components shortcode to add ACF fields anywhere in the_content()
+ *
+ * ========================================================================
+ */
+
+	//add_shortcode('component', 'skwp_component_shortcode');
+	 
+	function skwp_component_shortcode($attr) {
+		
+		$enabled_components = get_field('enabled_components');
+		
+		if ($enabled_components && in_assoc($attr['field'], $enabled_components)) {
+			$template = 'partials/components/'.$attr['field'];
+			ob_start();
+			get_template_part($template);
+			return ob_get_clean();
+		}
+	}
+	
+	function in_assoc($needle, $array) {
+		$value = array_values($array);
+		return in_array($needle, $value);
+	}
+	
+/*
+ * ========================================================================
+ *
  *	Remove default page/post supports
  *
  *	@docs http://codex.wordpress.org/Function_Reference/remove_post_type_support
