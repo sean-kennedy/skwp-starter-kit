@@ -116,30 +116,37 @@
 /*
  * ========================================================================
  *
- *	ACF: Components Shortcode
+ *	Component Shortcode
  *
- *	@desc Components shortcode to add ACF fields anywhere in the_content()
+ *	@desc Component shortcode to load a template anywhere in the_content()
  *
  * ========================================================================
  */
+ 
+	/* Usage *
+	
+	[component template="file-name" field="acf_field_name"]
+	
+	*/
 
-	//add_shortcode('component', 'skwp_component_shortcode');
+	add_shortcode('component', 'skwp_component_shortcode');
 	 
 	function skwp_component_shortcode($attr) {
 		
-		$enabled_components = get_field('enabled_components');
-		
-		if ($enabled_components && in_assoc($attr['field'], $enabled_components)) {
-			$template = 'partials/components/'.$attr['field'];
+		if (!empty($attr['template'])) {
+			
+			$template = 'partials/components/' . $attr['template'] . '.php';
+			
+			if (!empty($attr['field'])) {
+				$field = $attr['field'];
+			}
+			
 			ob_start();
-			get_template_part($template);
+			include(locate_template($template, false, false));
 			return ob_get_clean();
+		
 		}
-	}
-	
-	function in_assoc($needle, $array) {
-		$value = array_values($array);
-		return in_array($needle, $value);
+		
 	}
 	
 /*
