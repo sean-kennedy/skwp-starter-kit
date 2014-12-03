@@ -8,7 +8,7 @@
 	
 				<h1><?php echo $wp_query->found_posts; ?> Search Results for: <?php echo get_search_query(); ?></h1>
 				
-				<?php get_template_part('loop'); ?>
+				<?php get_template_part('partials/loop'); ?>
 		
 			</div>
 			
