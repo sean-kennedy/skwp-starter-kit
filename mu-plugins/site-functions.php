@@ -135,7 +135,7 @@
 		
 		if (!empty($attr['template'])) {
 			
-			$template = 'partials/components/' . $attr['template'] . '.php';
+			$template = 'components/' . $attr['template'] . '.php';
 			
 			if (!empty($attr['field'])) {
 				$field = $attr['field'];
