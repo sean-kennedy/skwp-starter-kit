@@ -54,7 +54,7 @@
  *
  *  A responsive menu solution for Wordpress.
  *
- *  Made by Sean Kennedy @seankau
+ *  Made by Sean Kennedy @seank_au
  *  Under MIT License
  */
 ;(function($, window, document, undefined) {
