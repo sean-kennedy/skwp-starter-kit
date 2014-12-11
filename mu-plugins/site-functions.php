@@ -42,6 +42,24 @@
 /*
  * ========================================================================
  *
+ *	Load admin CSS
+ *
+ * ========================================================================
+ */
+	
+	add_action('admin_head', 'skwp_admin_css');
+	
+	function skwp_admin_css() {
+		echo '<style>
+		.acf-field {
+			max-width: none;
+		} 
+		</style>';
+	}
+	
+/*
+ * ========================================================================
+ *
  *	ACF: Options pages (v5.0)
  *
  *	@icons http://melchoyce.github.io/dashicons/
