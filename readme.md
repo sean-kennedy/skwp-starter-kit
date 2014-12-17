@@ -12,6 +12,13 @@ Revisions, Disable Editor
 define('WP_POST_REVISIONS', 5);
 define('DISALLOW_FILE_EDIT', true);
 ```
+Add FTP details
+
+```
+define('FTP_USER', 'username');
+define('FTP_PASS', 'password');
+define('FTP_HOST', 'localhost');
+```
 
 Update Permalinks:
 
