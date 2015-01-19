@@ -155,6 +155,7 @@
 			
 			$template = 'components/' . $attr['template'] . '.php';
 			
+			// Field variable will become available in the loaded template
 			if (!empty($attr['field'])) {
 				$field = $attr['field'];
 			}
