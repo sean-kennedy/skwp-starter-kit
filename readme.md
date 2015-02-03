@@ -39,6 +39,8 @@ Install Plugins:
 - Autoptimize (minification)
 - EM Object Cache (query cache)
 - Live Edit (front-end editing)
+- Optimize Database after Deleting Revisions
+- Compact View Mode
 
 After Launch:
 
