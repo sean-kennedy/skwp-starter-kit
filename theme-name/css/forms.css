@@ -12,44 +12,48 @@
   	
   	.gform_fields ol,
   	.gform_fields ul {
-	  	margin-left: 0;
-	  	margin-right: 0;
+  		margin-left: 0;
+  		margin-right: 0;
   	}
   	
   	.gform_fields li {
-	  	list-style: none;
+  		list-style: none;
   	}
   	
   	.gfield_label {
-	  	margin: 0.75em 0 0.4em 0;
+  		margin: 0.75em 0 0.4em 0;
   	}
   	
   	.gfield_required {
-	  	color: red;
+  		color: red;
   	}
   	
   	.gfield_radio label,
   	.gfield_checkbox label {
-	  	display: inline;
+  		display: inline;
   	}
   	
   	.gfield_radio li,
   	.gfield_checkbox li {
-	  	margin: 0.5em 0;
+  		margin: 0.5em 0;
+  	}
+  	
+  	.gform_body iframe {
+  		margin: 0;
   	}
   	
   	.gform_validation_container {
-	  	display: none;
+  		display: none;
   	}
   	
   	.validation_error {
-	  	background: #F2DEDE;
-	  	padding: 8px 13px;
-	  	margin: 0.2em 0;
+  		background: #F2DEDE;
+  		padding: 8px 13px;
+  		margin: 0.2em 0;
   	}
   	
   	.validation_message {
-	  	color: red;
+  		color: red;
   	}
 
 /*=============================================================================
