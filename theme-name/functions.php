@@ -147,6 +147,8 @@
 	 */
 	function content_excerpt($content, $length = 13, $link_text = 'Read More') {
 		
+		$content = preg_replace('/\[.*\]/', '', $content);
+		
 		$trimmed_content = wp_trim_words($content, $length, '... <a class="read-more-link" href="' . get_permalink() . '">' . $link_text . '</a>' );
 		
 		return $trimmed_content;
