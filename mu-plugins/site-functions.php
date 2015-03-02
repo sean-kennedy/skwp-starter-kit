@@ -143,7 +143,7 @@
  
 	/* Usage *
 	
-	[component template="file-name" field="acf_field_name"]
+	[component template="file-name" field="field_name"]
 	
 	*/
 
@@ -153,7 +153,7 @@
 		
 		if (!empty($attr['template'])) {
 			
-			$template = 'components/' . $attr['template'] . '.php';
+			$template = WP_CONTENT_DIR . '/components/' . $attr['template'] . '.php';
 			
 			// Field variable will become available in the loaded template
 			if (!empty($attr['field'])) {
@@ -161,7 +161,8 @@
 			}
 			
 			ob_start();
-			include(locate_template($template, false, false));
+			//include(locate_template($template, false, false));
+			include($template);
 			return ob_get_clean();
 		
 		}
