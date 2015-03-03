@@ -134,44 +134,6 @@
 /*
  * ========================================================================
  *
- *	Component Shortcode
- *
- *	@desc Component shortcode to load a template anywhere in the_content()
- *
- * ========================================================================
- */
- 
-	/* Usage *
-	
-	[component template="file-name" field="field_name"]
-	
-	*/
-
-	add_shortcode('component', 'skwp_component_shortcode');
-	 
-	function skwp_component_shortcode($attr) {
-		
-		if (!empty($attr['template'])) {
-			
-			$template = WP_CONTENT_DIR . '/components/' . $attr['template'] . '.php';
-			
-			// Field variable will become available in the loaded template
-			if (!empty($attr['field'])) {
-				$field = $attr['field'];
-			}
-			
-			ob_start();
-			//include(locate_template($template, false, false));
-			include($template);
-			return ob_get_clean();
-		
-		}
-		
-	}
-	
-/*
- * ========================================================================
- *
  *	Remove default page/post supports
  *
  *	@docs http://codex.wordpress.org/Function_Reference/remove_post_type_support
