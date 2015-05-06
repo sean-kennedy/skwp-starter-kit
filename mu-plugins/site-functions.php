@@ -42,7 +42,7 @@
 		remove_filter('comment_text_rss', 'wp_staticize_emoji');
 		remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
 		
-		add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce');
+		add_filter('tiny_mce_plugins', 'skwp_disable_emojis_tinymce');
 		
 	}
 	
