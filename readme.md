@@ -59,7 +59,11 @@ After Launch:
 - Check Gravity Forms send fields and email addresses
 - Resave ACF groups to ensure cache has been written to acf-cache folder
 
-Known Issues:
+### SmoothState.js
+
+Download and enqueue the latest smoothState.js and smoothState.css in functions.php. Incorporate js, css, footer.php and header.php files from `smoothstate-theme` folder into main theme folder.
+
+### Known Issues:
 
 - EM Object Cache in FileCache mode conflicts with ACF admin edit screen. To make changes to ACF fields disable FileCache mode.
 
