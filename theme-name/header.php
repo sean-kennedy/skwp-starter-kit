@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?> class="no-js desktop-nav">
 <head>
 
 	<meta charset="<?php bloginfo('charset'); ?>">
@@ -30,7 +30,7 @@
 				</a>
 			</div>
 			
-			<nav class="nav js-nav">
+			<nav class="main-nav js-nav">
 				<?php main_nav(); ?>
 			</nav>
 			

@@ -18,7 +18,7 @@
 		display: none;
 	}
 	
-	.mobile-nav .jPanelMenu-panel .nav {
+	.mobile-nav .jPanelMenu-panel .js-nav {
 		display: none;
 	}
 	
@@ -193,7 +193,7 @@
  	/* Hack to stop mobile nav flashing on page load for iDevices
 	---------------------------------------- */
 	
-	.mobile-nav .jPanelMenu-panel .nav {
+	.mobile-nav .jPanelMenu-panel .js-nav {
 		opacity: 0;
 	}
 	
