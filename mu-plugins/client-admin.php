@@ -24,6 +24,10 @@
 		
 		$advancedSettings = get_user_meta($profile->ID, 'skwp_advanced_settings', true);
 		
+		/*echo '<pre>';
+		print_r(maybe_unserialize(get_user_meta($profile->ID, 'metaboxhidden_nav-menus', true)));
+		echo '</pre>';*/
+		
 		?>
 		<tr>
 			<th scope="row">Advanced Settings</th>
@@ -47,6 +51,35 @@
 		} else {
 			update_user_meta($user_id, 'skwp_advanced_settings', 0);
 		}
+		
+	}
+	
+/*
+ * ========================================================================
+ *
+ *	New user default settings
+ *
+ * ========================================================================
+ */
+ 
+	add_action('user_register', 'skwp_admin_bar_off_default', 10, 1);
+	
+	function skwp_admin_bar_off_default($user_id) {
+		
+		// Admin bar
+		update_user_meta($user_id, 'show_admin_bar_front', 'false');
+		update_user_meta($user_id, 'show_admin_bar_admin', 'false');
+		
+		// Per page counts
+		update_user_meta($user_id, 'upload_per_page', 200);
+		update_user_meta($user_id, 'edit_page_per_page', 200);
+		update_user_meta($user_id, 'edit_post_per_page', 200);
+		
+		// Yoast SEO
+		update_user_meta($user_id, 'wpseo_ignore_tour', 1);
+		
+		// Menus metabox screen options
+		update_user_meta($user_id, 'metaboxhidden_nav-menus', array('add-post', 'add-custom-links', 'add-category', 'add-post_tag'));
 		
 	}
 	 
@@ -204,39 +237,6 @@
     function skwp_admin_footer () {
     	echo 'Site by <a href="http://www.rowland.com.au/" target="_blank">Rowland</a>.';
     }
-    
-/*
- * ========================================================================
- *
- *	Screen Options: Number of items per page
- *
- * ========================================================================
- */
- 
-	add_filter('get_user_option_edit_page_per_page', 'skwp_edit_per_page', 10, 3);
-	add_filter('get_user_option_edit_post_per_page', 'skwp_edit_per_page', 10, 3);
-	add_filter('get_user_option_edit_upload_per_page', 'skwp_edit_per_page', 10, 3);
-	    
-	function skwp_edit_per_page($result, $option, $user) {
-	    if ((int)$result < 1) {
-	        return 200;
-	    }
-	}
-	
-/*
- * ========================================================================
- *
- *	Admin toolbar off by default
- *
- * ========================================================================
- */
- 
-	add_action('user_register', 'skwp_admin_bar_off_default', 10, 1);
-	
-	function skwp_admin_bar_off_default($user_id) {
-		update_user_meta($user_id, 'show_admin_bar_front', 'false');
-		update_user_meta($user_id, 'show_admin_bar_admin', 'false');
-	}
 	
 /*
  * ========================================================================
