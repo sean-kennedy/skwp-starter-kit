@@ -24,10 +24,6 @@
 		
 		$advancedSettings = get_user_meta($profile->ID, 'skwp_advanced_settings', true);
 		
-		/*echo '<pre>';
-		print_r(maybe_unserialize(get_user_meta($profile->ID, 'metaboxhidden_nav-menus', true)));
-		echo '</pre>';*/
-		
 		?>
 		<tr>
 			<th scope="row">Advanced Settings</th>
