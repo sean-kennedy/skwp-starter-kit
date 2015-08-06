@@ -175,6 +175,12 @@
 		}
 	}
 	
+	add_action('login_head', 'skwp_hide_login_logo' );
+	
+	function skwp_hide_login_logo() {
+		echo '<style> #login h1 { display: none; } </style>';
+	}
+	
 /*
  * ========================================================================
  *
@@ -218,6 +224,22 @@
 			</script>';
 		}
 	
+	}
+	
+/*
+ * ========================================================================
+ *
+ *	Admin bar site link open in new tab
+ *
+ * ========================================================================
+ */
+		 
+	add_action('admin_footer', 'skwp_site_link_new_tab');
+	
+	function skwp_site_link_new_tab() {
+		echo '<script>
+		var homeLink = document.getElementById("wp-admin-bar-site-name").getElementsByTagName("a")[0].target = "_blank";
+		</script>';
 	}
 	
 /*
