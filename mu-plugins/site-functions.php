@@ -216,6 +216,36 @@
 /*
  * ========================================================================
  *
+ *	Add Categories and Tags for Pages
+ *
+ * ========================================================================
+ */
+	
+	add_action('init', 'skwp_taxonomies_for_pages');
+	
+	function skwp_taxonomies_for_pages() {
+		register_taxonomy_for_object_type('post_tag', 'page');
+		register_taxonomy_for_object_type('category', 'page');
+	}
+	
+	if (!is_admin()) {
+		add_action('pre_get_posts', 'skwp_category_archives');
+		add_action('pre_get_posts', 'skwp_tags_archives');
+	}
+	
+	function skwp_tags_archives($wp_query) {
+		if ($wp_query->get('tag'))
+		$wp_query->set('post_type', 'any');
+	}
+	
+	function skwp_category_archives($wp_query) {
+		if ($wp_query->get('category_name') || $wp_query->get('cat'))
+		$wp_query->set('post_type', 'any');
+	}
+	
+/*
+ * ========================================================================
+ *
  *	Change default Post type name
  *
  * ========================================================================
