@@ -221,7 +221,7 @@
  * ========================================================================
  */
 	
-	add_action('init', 'skwp_taxonomies_for_pages');
+	//add_action('init', 'skwp_taxonomies_for_pages');
 	
 	function skwp_taxonomies_for_pages() {
 		register_taxonomy_for_object_type('post_tag', 'page');
@@ -229,8 +229,8 @@
 	}
 	
 	if (!is_admin()) {
-		add_action('pre_get_posts', 'skwp_category_archives');
-		add_action('pre_get_posts', 'skwp_tags_archives');
+		//add_action('pre_get_posts', 'skwp_category_archives');
+		//add_action('pre_get_posts', 'skwp_tags_archives');
 	}
 	
 	function skwp_tags_archives($wp_query) {
