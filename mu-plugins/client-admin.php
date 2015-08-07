@@ -106,28 +106,7 @@
 /*
  * ========================================================================
  *
- *	Clean up user profile page
- *
- * ========================================================================
- */
-
-	//add_filter('user_contactmethods', 'skwp_remove_contactmethods');
-	
-	function skwp_remove_contactmethods($contactmethods) {
-		
-		unset($contactmethods['url']);
-		unset($contactmethods['googleplus']);
-		unset($contactmethods['twitter']);
-		unset($contactmethods['facebook']);
-		
-		return $contactmethods;
-		
-	}
-	
-/*
- * ========================================================================
- *
- *	CSS
+ *	Admin CSS
  *
  * ========================================================================
  */
@@ -139,6 +118,7 @@
 		$current_user = wp_get_current_user();
 		$showAdvancedSettings = get_user_meta($current_user->ID, 'skwp_advanced_settings', true); 
 		
+		// All users
 		echo '<style>
 		#wp-admin-bar-wp-logo,
 		tr.user-url-wrap,
@@ -155,6 +135,7 @@
 		}
 		</style>';
 		
+		// Only users with advanced settings hidden
 		if (!$showAdvancedSettings) {
 			echo '<style>
 			#menu-appearance,
@@ -175,6 +156,7 @@
 		}
 	}
 	
+	// Hide logo on login page
 	add_action('login_head', 'skwp_hide_login_logo' );
 	
 	function skwp_hide_login_logo() {
@@ -245,7 +227,7 @@
 /*
  * ========================================================================
  *
- *	Footer
+ *	Admin footer text
  *
  * ========================================================================
  */
@@ -298,7 +280,7 @@
 /*
  * ========================================================================
  *
- *	Dashboard
+ *	Admin dashboard cleanup
  *
  * ========================================================================
  */
