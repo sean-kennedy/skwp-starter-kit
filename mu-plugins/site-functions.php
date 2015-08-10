@@ -183,6 +183,26 @@
 /*
  * ========================================================================
  *
+ *	Remove Posts
+ *
+ * ========================================================================
+ */
+	
+	//add_action('admin_menu', 'skwp_remove_admin_menus');
+	//add_action('wp_before_admin_bar_render', 'skwp_remove_toolbar_menus');
+	
+	function skwp_remove_admin_menus() {
+	    remove_menu_page( 'edit.php' );
+	}
+	
+	function skwp_remove_toolbar_menus() {
+	    global $wp_admin_bar;
+	    $wp_admin_bar->remove_menu( 'new-post' );
+	}
+	
+/*
+ * ========================================================================
+ *
  *	Remove default page/post supports
  *
  *	@docs http://codex.wordpress.org/Function_Reference/remove_post_type_support
@@ -339,19 +359,6 @@
 		
 	}
 	
-	/**
-	 *	Flush rewrite rules on plugin activation only
-	 */
-	//register_activation_hook(__FILE__, 'skwp_rewrite_flush');
-	
-	function skwp_rewrite_flush() {
-		
-	    skwp_custom_post_type_init();
-	    
-	    flush_rewrite_rules();
-	    
-	}
-	
 /*
  * ========================================================================
  *
@@ -361,15 +368,17 @@
  */
  	
 	/**
-	 *	Example shortcode to use get_template_part
-	 */
- 	//add_shortcode('example_shortcode', 'skwp_template_shortcode');
+	 *	Template part
+	 */	
+	add_shortcode('template', 'skwp_template_part_shortcode');
 	
-	function skwp_template_shortcode($attr) {
-	
-	    ob_start();
-	    get_template_part('shortcodes/timeline');
-	    return ob_get_clean();
+	function skwp_template_part_shortcode($attr) {
+		
+		if (!empty($attr['name'])) {
+		    ob_start();
+		    get_template_part($attr['name']);
+		    return ob_get_clean();
+		}
 	    
 	}
 

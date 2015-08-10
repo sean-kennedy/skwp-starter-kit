@@ -178,22 +178,20 @@
 		add_action('admin_menu', 'skwp_add_menu_item');
 		
 		function skwp_add_menu_item() {
-			add_menu_page('Page title', 'Menus', 'manage_options', 'skwp-top-menus', 'skwp_menu_item', 'dashicons-menu', 58);	
+			add_menu_page('Menus', 'Menus', 'manage_options', 'nav-menus.php', '', 'dashicons-menu', 58);
 		}
 		 
 		add_action('admin_footer', 'skwp_add_menu_js');
 		
 		function skwp_add_menu_js() {
 			echo '<script>
-			var menuItem = document.getElementById("toplevel_page_skwp-top-menus");
+			var menuItem = document.getElementById("toplevel_page_nav-menus");
 			var menuLink = menuItem.getElementsByTagName("a")[0];
 			
 			var appearanceItem = document.getElementById("menu-appearance");
 			var appearanceLink = appearanceItem.getElementsByTagName("a")[0];
 			
 			var url = window.location.href;
-	
-			menuLink.setAttribute("href", "nav-menus.php");
 	
 			if (url.indexOf("nav-menus.php") > -1) {
 				appearanceItem.className = appearanceItem.className.replace(/(?:^|\s)wp-has-current-submenu(?!\S)/g, "");
