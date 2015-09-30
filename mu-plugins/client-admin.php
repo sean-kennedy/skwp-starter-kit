@@ -136,6 +136,16 @@
 		#dashboard-widgets-wrap {
 			overflow: visible;
 		}
+		.admin-color-midnight .acf-button.blue {
+			background: #e14d43 none repeat scroll 0 0;
+			border-color: #d02c21;
+			box-shadow: 0 1px 0 #ec8b85 inset, 0 1px 0 rgba(0, 0, 0, 0.15);
+			color: #fff;	
+		}
+		.admin-color-midnight .acf-fc-popup ul li a:hover {
+			background: #e14d43;
+			text-shadow: #ec8b85 0 1px 0;
+		}
 		</style>';
 		
 		// Only users with advanced settings hidden
