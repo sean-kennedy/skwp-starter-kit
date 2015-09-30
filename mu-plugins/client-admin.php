@@ -133,6 +133,9 @@
 		.metabox-holder .postbox-container .empty-container {
 			border: none;
 		}
+		#dashboard-widgets-wrap {
+			overflow: visible;
+		}
 		</style>';
 		
 		// Only users with advanced settings hidden
