@@ -24,11 +24,9 @@
 	
 		<div class="wrap group">
 		
-			<div class="logo">
-				<a href="<?php echo home_url(); ?>">
-					<!--<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo('name'); ?>">-->
-				</a>
-			</div>
+			<a class="logo" href="<?php echo home_url(); ?>">
+				<!--<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo('name'); ?>">-->
+			</a>
 			
 			<nav class="main-nav js-nav">
 				<?php main_nav(); ?>

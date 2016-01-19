@@ -119,6 +119,7 @@
 	/* Logo */
 		
 	.logo {
+		display: block;
 		float: left;
 	}
 	
@@ -160,14 +161,15 @@
 			max-height: 0;
 			max-width: 0;
 			left: -20px;
-			top: -2px;
+			top: -1px;
 			font-size: 1.1em;
-			color: #CD202C;
+			color: #00adef;
 		}
 		
 		/* Ordered List (ol) */
 		
 		.body-content > ol {
+			position: relative;
 			counter-reset: item;
 		}
 		
@@ -177,12 +179,10 @@
 			
 			.body-content > ol li:before {
 				position: absolute;
-				left: 15px;
+				left: -20px;
             	content: counter(item) ". ";
 				counter-increment: item;
-				color: #CD202C;
-				/*color: #FFB612;*/
-				font-family: "AvenirLTStd-Medium", Helvetica, Arial, sans-serif;
+				color: #00adef;
         	}
         	
 		/* Intro Para
