@@ -6,9 +6,13 @@
 		
 			<div class="body-content">
 		
-				<h1>Page not found</h1>
+				<h1>That page can&rsquo;t be found (404).</h1>
 				
-				<h2><a href="<?php echo home_url(); ?>">Return home?</a></h2>
+				<p>It looks like nothing was found at this location.</p>
+				
+				<p>Return <a href="<?php echo home_url(); ?>">home</a>? or maybe try a search:</p>
+				
+				<?php get_template_part('partials/search-form'); ?>
 				
 			</div>
 			
@@ -17,7 +21,5 @@
 		</div>
 		
 	</section>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -6,8 +6,8 @@
 		
 			<div class="body-content">
 	
-				<h1>Archives</h1>
-			
+				<h1><?php post_type_archive_title(); ?><?php single_cat_title(); ?></h1>
+				
 				<?php get_template_part('partials/loop'); ?>
 				
 			</div>

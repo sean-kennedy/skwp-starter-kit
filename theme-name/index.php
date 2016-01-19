@@ -6,7 +6,7 @@
 		
 			<div class="body-content">
 	
-				<h1>Latest Posts</h1>
+				<h1><?php single_post_title(); ?></h1>
 			
 				<?php get_template_part('partials/loop'); ?>
 		
