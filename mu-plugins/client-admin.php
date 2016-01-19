@@ -192,7 +192,7 @@
 		(function($) {
 			
 			// Hide Yoast from Yoast SEO metabox
-			$("#wpseo_meta > h3 > span").html("SEO");
+			$("#wpseo_meta > h2 > span, #wpseo_meta > h3 > span").html("SEO");
 			
 		})(jQuery);
 		

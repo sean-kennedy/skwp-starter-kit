@@ -116,7 +116,7 @@
  * ========================================================================
  */
  
- 	add_action('init', 'skwp_acf_add_options_page');
+ 	//add_action('init', 'skwp_acf_add_options_page');
  	
  	function skwp_acf_add_options_page() {
 	
