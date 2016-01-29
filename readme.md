@@ -16,16 +16,19 @@ define('FS_METHOD', 'direct');
 Install Plugins:
 
 - Advanced Custom Fields Pro
-- Relevanssi - Add search logging excluding master
-- Yoast SEO - Import settings or setup as per http://onlinemediamasters.com/yoast-wordpress-seo-tutorial/
-- iThemes Security
-- CMS Tree Page View
-- Gravity Forms
-- Velvet Blues Update URLs
+- ACF-Content Analysis for Yoast SEO
+- Advanced Custom Fields: Link Picker
 - Autoptimize (minification)
-- Optimize Database after Deleting Revisions
+- CMS Tree Page View
 - Disable Comments
+- Gravity Forms
+- iThemes Security
+- Optimize Database after Deleting Revisions
+- Relevanssi - Add search logging excluding master
 - RICG Responsive Images
+- SO Clean Up Yoast SEO
+- Velvet Blues Update URLs
+- Yoast SEO - Import settings or setup as per http://onlinemediamasters.com/yoast-wordpress-seo-tutorial/
 
 After Launch:
 

@@ -376,7 +376,7 @@
 		
 		if (!empty($attr['name'])) {
 		    ob_start();
-		    get_template_part($attr['name']);
+		    get_template_part('partials/' . $attr['name']);
 		    return ob_get_clean();
 		}
 	    

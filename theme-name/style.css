@@ -61,14 +61,14 @@
 		font-size: 0.9em;
 		margin: 0;
 		background-color: #FFFFFF;
-	  	border: 1px solid #CFCFCF;
-	  	color: #7A7A7A;
-	  	padding: 0px 10px;
+		border: 1px solid #CFCFCF;
+		color: #7A7A7A;
+		padding: 0px 10px;
 	}
 	
 	input[type="text"], input[type="password"], input[type="email"] {
-	  	line-height: 32px;
-	  	height: 32px;
+		line-height: 32px;
+		height: 32px;
 	}
 	
 	/* Buttons
@@ -77,14 +77,14 @@
 	.btn, button, input[type="button"], input[type="reset"], input[type="submit"] {
 		padding: 10px 25px;
 		background-color: #F1F1F1;
-	  	color: #7A7A7A;
-	  	font-size: 0.9em;
-	  	margin: 0;
+		color: #7A7A7A;
+		font-size: 0.9em;
+		margin: 0;
 	}
 	
 	.btn:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
 		background-color: #aaa;
-	  	color: #fff;
+		color: #fff;
 	}
 	
 	.btn.disabled {
