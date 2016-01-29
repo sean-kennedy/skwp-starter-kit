@@ -26,7 +26,7 @@ Install Plugins:
 - Optimize Database after Deleting Revisions
 - Relevanssi - Add search logging excluding master
 - RICG Responsive Images
-- SO Clean Up Yoast SEO
+- SO Hide SEO Bloat
 - Velvet Blues Update URLs
 - Yoast SEO - Import settings or setup as per http://onlinemediamasters.com/yoast-wordpress-seo-tutorial/
 
