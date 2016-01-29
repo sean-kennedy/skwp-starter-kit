@@ -231,7 +231,7 @@
 	    if (!is_admin()) {
 	    
 	        wp_deregister_script('jquery');
-			wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.1', false);
+			wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js', array(), '1.12.0', false);
 	        
 	        wp_register_script('menu', get_template_directory_uri() . '/js/menu.js', array('jquery'), '1.0.0', true);
 	        
