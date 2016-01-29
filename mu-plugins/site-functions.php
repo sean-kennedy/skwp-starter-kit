@@ -369,15 +369,25 @@
  	
 	/**
 	 *	Template part
-	 */	
+	 *
+	 *	@desc Load a theme template part from /partials folder anywhere in the_content(). Pass in variables as 
+	 *		  attributes to the shortcode and the value will available as $attr['attribute_name'] in the template.
+	 */
+	 
 	add_shortcode('template', 'skwp_template_part_shortcode');
 	
 	function skwp_template_part_shortcode($attr) {
 		
 		if (!empty($attr['name'])) {
-		    ob_start();
-		    get_template_part('partials/' . $attr['name']);
-		    return ob_get_clean();
+			
+			$template = get_template_directory() . '/partials/' . $attr['name'] . '.php';
+			
+			if (file_exists($template)) {
+				ob_start();
+				include($template);
+				return ob_get_clean();
+			}
+		
 		}
 	    
 	}
