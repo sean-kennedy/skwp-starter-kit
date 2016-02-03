@@ -172,7 +172,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 		display: inline-block;
 		cursor: pointer;
 		vertical-align: middle;
-		-webkit-appearance: button;
+		-webkit-appearance: none;
 	  	border: none;
 	}
 	
