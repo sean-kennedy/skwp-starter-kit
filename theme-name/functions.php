@@ -182,23 +182,27 @@
 	 */
 	function main_nav() {
 		
-		wp_nav_menu(array(
-			'theme_location'  => 'main-menu',
-			'menu'            => '', 
-			'container'       => false, 
-			'container_id'    => '',
-			'menu_class'      => 'menu', 
-			'menu_id'         => '',
-			'echo'            => true,
-			'fallback_cb'     => 'wp_page_menu',
-			'before'          => '',
-			'after'           => '',
-			'link_before'     => '',
-			'link_after'      => '',
-			'items_wrap'      => '<ul class="js-nav-list nav-list group">%3$s</ul>',
-			'depth'           => 0,
-			'walker'          => new Exclude_Unpublished
-		));
+		if (has_nav_menu('main-menu')) {
+		
+			wp_nav_menu(array(
+				'theme_location'  => 'main-menu',
+				'menu'            => '', 
+				'container'       => false, 
+				'container_id'    => '',
+				'menu_class'      => 'menu', 
+				'menu_id'         => '',
+				'echo'            => true,
+				'fallback_cb'     => 'wp_page_menu',
+				'before'          => '',
+				'after'           => '',
+				'link_before'     => '',
+				'link_after'      => '',
+				'items_wrap'      => '<ul class="js-nav-list nav-list group">%3$s</ul>',
+				'depth'           => 0,
+				'walker'          => new Exclude_Unpublished
+			));
+		
+		}
 		
 	}
 	
