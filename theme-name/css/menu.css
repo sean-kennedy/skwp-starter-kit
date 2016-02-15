@@ -7,212 +7,254 @@
 */
 
 /*=============================================================================
-  Superfish (Desktop Navigation)
+  Desktop Navigation
   ========================================================================== */
-  	
-	/* Display On/Off Settings
-	---------------------------------------- */
-  	
-	.desktop-nav .sub-menu-trigger,
-	.desktop-nav .nav-trigger {
-		display: none;
-	}
+  
+	@media only screen and (min-width: 1025px) {
+		
+		/* Display On/Off Settings
+		---------------------------------------- */
+		
+		.js-mobile-nav,
+		.nav-trigger {
+			display: none;	
+		}
+		
+		.js-desktop-nav {
+			display: block;
+		}
 	
-	.mobile-nav .jPanelMenu-panel .js-nav {
-		display: none;
-	}
+		/* Essential Positioning Styles
+		---------------------------------------- */
+		
+		/* Global */
+		
+		.nav-list, 
+		.nav-list * {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+		.nav-list ul {
+			position: absolute;
+			display: none;
+			top: 100%;
+			left: 0;
+			z-index: 99;
+			min-width: 12em;
+		}
+		
+		.nav-list li {
+			position: relative;
+			white-space: nowrap;
+		}
+		
+		.nav-list a,
+		.nav-list a:visited {
+			text-decoration: none;
+			line-height: 1em;
+		}
+		
+		.nav-list li:hover > ul,
+		.nav-list li.sfHover > ul {
+			display: block;
+		}
+		
+		.nav-list a {
+			display: block;
+			position: relative;
+		}
+		
+		/* 1st Tier */
+		
+		.nav-list > li {
+			float: left;
+		}
+		
+		/* 3rd Tier */
+		
+		.nav-list .sub-menu .sub-menu {
+			top: 0;
+			left: 100%;
+		}
+		
+		/* Essential Arrow Styles
+		---------------------------------------- */
+		
+		/* Global */
+		
+		/* Fixes IE11 bug with list-style:none; being ignored. */
+		.sf-arrows li {
+		    list-style-image: url(data:0);
+		}
+		
+		.sf-arrows .sf-with-ul {
+			padding-right: 30px;
+		}
+		
+		.sf-arrows .sf-with-ul:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			margin-top: -2px;
+			height: 0;
+			width: 0;
+			border: 5px solid transparent;
+			border-top-color: #333;
+		}
+		
+		/* 1st Tier */
 	
-	.mobile-nav #jPanelMenu-menu .sub-menu-trigger {
-		display: block;
-	}
-
-	/* Essential Positioning Styles
-	---------------------------------------- */
+		.sf-arrows > li > .sf-with-ul:focus:after,
+		.sf-arrows > li:hover > .sf-with-ul:after,
+		.sf-arrows > .sfHover > .sf-with-ul:after {
+			border-top-color: #666;
+		}
+		
+		/* 2nd Tier (Right Facing) */
+		
+		.sf-arrows .sub-menu .sf-with-ul:after {
+			margin-top: -5px;
+			margin-right: -3px;
+			border-color: transparent;
+			border-left-color: #333;
+		}
 	
-	/* Global */
+		.sf-arrows .sub-menu li > .sf-with-ul:focus:after,
+		.sf-arrows .sub-menu li:hover > .sf-with-ul:after,
+		.sf-arrows .sub-menu .sfHover > .sf-with-ul:after {
+			border-left-color: #666;
+		}
 	
-	.desktop-nav .nav-list, 
-	.desktop-nav .nav-list * {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	
-	.desktop-nav .nav-list ul {
-		position: absolute;
-		display: none;
-		top: 100%;
-		left: 0;
-		z-index: 99;
-		min-width: 12em;
-	}
-	
-	.desktop-nav .nav-list li {
-		position: relative;
-		white-space: nowrap;
-	}
-	
-	.desktop-nav .nav-list a,
-	.desktop-nav .nav-list a:visited {
-		text-decoration: none;
-		line-height: 1em;
-	}
-	
-	.desktop-nav .nav-list li:hover > ul,
-	.desktop-nav .nav-list li.sfHover > ul {
-		display: block;
-	}
-	
-	.desktop-nav .nav-list a {
-		display: block;
-		position: relative;
-	}
-	
-	/* 1st Tier */
-	
-	.desktop-nav .nav-list > li {
-		float: left;
-	}
-	
-	/* 3rd Tier */
-	
-	.desktop-nav .nav-list .sub-menu .sub-menu {
-		top: 0;
-		left: 100%;
-	}
-	
-	/* Essential Arrow Styles
-	---------------------------------------- */
-	
-	/* Global */
-	
-	/* Fixes IE11 bug with list-style:none; being ignored. */
-	.desktop-nav .sf-arrows li {
-	    list-style-image: url(data:0);
-	}
-	
-	.desktop-nav .sf-arrows .sf-with-ul {
-		padding-right: 30px;
-	}
-	
-	.desktop-nav .sf-arrows .sf-with-ul:after {
-		content: '';
-		position: absolute;
-		top: 50%;
-		right: 10px;
-		margin-top: -2px;
-		height: 0;
-		width: 0;
-		border: 5px solid transparent;
-		border-top-color: #333;
-	}
-	
-	/* 1st Tier */
-
-	.desktop-nav .sf-arrows > li > .sf-with-ul:focus:after,
-	.desktop-nav .sf-arrows > li:hover > .sf-with-ul:after,
-	.desktop-nav .sf-arrows > .sfHover > .sf-with-ul:after {
-		border-top-color: #666;
-	}
-	
-	/* 2nd Tier (Right Facing) */
-	
-	.desktop-nav .sf-arrows .sub-menu .sf-with-ul:after {
-		margin-top: -5px;
-		margin-right: -3px;
-		border-color: transparent;
-		border-left-color: #333;
-	}
-
-	.desktop-nav .sf-arrows .sub-menu li > .sf-with-ul:focus:after,
-	.desktop-nav .sf-arrows .sub-menu li:hover > .sf-with-ul:after,
-	.desktop-nav .sf-arrows .sub-menu .sfHover > .sf-with-ul:after {
-		border-left-color: #666;
 	}
 	
 /*=============================================================================
   Mobile Navigation
   ========================================================================== */
   
-	/* Essential Positioning Styles
-	---------------------------------------- */
-	
-	.mobile-nav .nav-list {
-		margin: 0;
-	}
-	
-	.mobile-nav .nav-list li {
-		position: relative;
-		overflow: hidden;
-	}
-	
-	.mobile-nav .nav-list a {
-		display: block;
-	}
+	@media only screen and (max-width: 1024px) {
 		
-	.mobile-nav .nav-list .sub-menu {
-		display: none;
-		margin: 0;
-	}
+		/* Display On/Off Settings
+		---------------------------------------- */
+		
+		.js-mobile-nav,
+		.nav-trigger {
+			display: block;	
+		}
+		
+		.js-desktop-nav {
+			display: none;
+		}
+		
+		/* Mobile Nav
+		---------------------------------------- */
+		
+		.mobile-nav {
+			display: none;
+			position: fixed;
+			width: 250px;
+			height: 100%;
+			right: 0;
+			top: 0;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			z-index: 1;
+		}
+		
+		.body-wrapper {
+			position: relative;
+			z-index: 2;
+			background: #fff;
+			min-height: 100%;
+			-webkit-transition: transform 0.15s ease-in-out 0s;
+			transition: transform 0.15s ease-in-out 0s;
+		}
+		
+		body.nav-open .body-wrapper {
+			-webkit-transform: translate3d(-250px,0,0);
+			transform: translate3d(-250px,0,0);
+		}
+		
+		body.nav-open .mobile-nav {
+			display: block;
+		}
+  
+		/* Essential Positioning Styles
+		---------------------------------------- */
+		
+		.nav-list {
+			margin: 0;
+		}
+		
+		.nav-list li {
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.nav-list a {
+			display: block;
+		}
+			
+		.nav-list .sub-menu {
+			display: none;
+			margin: 0;
+		}
+		
+		.nav-list .menu-item-has-children > a {
+			padding-right: 80px;
+		}
+		
+		/* Current Item */
+		
+		.nav-list .current-menu-item > a:before,
+		.nav-list .sub-menu .current-menu-item > a:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 54px;
+		}
+		
+		/* Sub Menu Trigger
+		---------------------------------------- */
+		
+		.sub-menu-trigger {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 54px;
+			height: 54px;
+			text-align: center;
+			font-size: 1.7em;
+			cursor: pointer;
+		}
+		
+		.sub-menu-trigger i {
+			position: relative;
+			top: 14px;
+			left: 3px;
+		}
+		
+	/*=============================================================================
+	  Nav Trigger
+	  ========================================================================== */
+		
+		.nav-trigger {
+			float: right;
+			position: relative;
+			display: block;
+			text-align: center;
+			width: 60px;
+			height: 60px;
+		}
+		
+		.nav-trigger i {
+			position: relative;
+			top: 14px;
+			left: 2px;
+			font-size: 2em;
+		}
 	
-	.mobile-nav .nav-list .menu-item-has-children > a {
-		padding-right: 80px;
-	}
-	
-	/* Current Item */
-	
-	.mobile-nav .nav-list .current-menu-item > a:before,
-	.mobile-nav .nav-list .sub-menu .current-menu-item > a:before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 54px;
-	}
-	
-	/* Sub Menu Trigger
-	---------------------------------------- */
-	
-	.mobile-nav .sub-menu-trigger {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 54px;
-		height: 54px;
-		text-align: center;
-		font-size: 1.7em;
-		cursor: pointer;
-	}
-	
-	.mobile-nav .sub-menu-trigger i {
-		position: relative;
-		top: 14px;
-		left: 3px;
-	}
-	
- 	/* Hack to stop mobile nav flashing on page load for iDevices
-	---------------------------------------- */
-	
-	.mobile-nav .jPanelMenu-panel .js-nav {
-		opacity: 0;
-	}
-	
-/*=============================================================================
-  Nav Trigger
-  ========================================================================== */
-	
-	.mobile-nav .nav-trigger {
-		float: right;
-		position: relative;
-		display: block;
-		text-align: center;
-		width: 60px;
-		height: 60px;
-	}
-	
-	.mobile-nav .nav-trigger i {
-		position: relative;
-		top: 14px;
-		left: 2px;
-		font-size: 2em;
 	}

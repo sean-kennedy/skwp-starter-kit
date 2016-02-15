@@ -250,94 +250,102 @@
 	/* Desktop Navigation
 	---------------------------------------- */
 	
-	.desktop-nav .main-nav {
-		float: right;
-	}
+	@media only screen and (min-width: 1025px) {
 	
-	.desktop-nav .nav-list a,
-	.desktop-nav .nav-list a:visited {
-		padding: 19px 10px;
-		color: #333;
-	}
+		.main-nav {
+			float: right;
+		}
+		
+		.nav-list a,
+		.nav-list a:visited {
+			padding: 19px 10px;
+			color: #333;
+		}
+		
+		/* 2nd Tier */
+		
+		.nav-list .sub-menu a,
+		.nav-list .sub-menu a:visited {
+		    background: #ccc;
+		    color: #333;
+		    padding: 0.5em 1em;
+		}
 	
-	/* 2nd Tier */
+		/* 3rd Tier */
+		
+		.nav-list .sub-menu .sub-menu a,
+		.nav-list .sub-menu .sub-menu a:visited {
+		    background: #ddd;
+		    color: #333;
+		    padding: 0.5em 1em;
+		}
 	
-	.desktop-nav .nav-list .sub-menu a,
-	.desktop-nav .nav-list .sub-menu a:visited {
-	    background: #ccc;
-	    color: #333;
-	    padding: 0.5em 1em;
-	}
-
-	/* 3rd Tier */
-	
-	.desktop-nav .nav-list .sub-menu .sub-menu a,
-	.desktop-nav .nav-list .sub-menu .sub-menu a:visited {
-	    background: #ddd;
-	    color: #333;
-	    padding: 0.5em 1em;
 	}
 	
 	/* Mobile Navigation
 	---------------------------------------- */
 	
-	.mobile-nav #jPanelMenu-menu {
-		background: #333;
-	}
+	@media only screen and (max-width: 1024px) {
 	
-	.mobile-nav .nav-list a {
-		background: #333;
-		color: #fff;
-		padding: 15px 20px;
-		border-bottom: 1px solid #444;
-	}
-	
-	/* Current Item */
-	
-	.mobile-nav .nav-list .current-menu-item > a:before,
-	.mobile-nav .nav-list .sub-menu .current-menu-item > a:before {
-		width: 4px;
-		background: slategrey;
-	}
-	
-	/* 2nd Tier */
-	
-	.mobile-nav .nav-list .sub-menu a {
-		background: #292929;
-	}
-	
-	/* 3rd Tier */
+		.mobile-nav {
+			background: #333;
+		}
 		
-	.mobile-nav .nav-list .sub-menu .sub-menu a {
-		background: #212121;
-	}
+		.nav-list a {
+			background: #333;
+			color: #fff;
+			padding: 15px 20px;
+			border-bottom: 1px solid #444;
+		}
+		
+		/* Current Item */
+		
+		.nav-list .current-menu-item > a:before,
+		.nav-list .sub-menu .current-menu-item > a:before {
+			width: 4px;
+			background: slategrey;
+		}
+		
+		/* 2nd Tier */
+		
+		.nav-list .sub-menu a {
+			background: #292929;
+		}
+		
+		/* 3rd Tier */
+			
+		.nav-list .sub-menu .sub-menu a {
+			background: #212121;
+		}
+		
+		/* Sub Menu Trigger
+		---------------------------------------- */
+		
+		.sub-menu-trigger {
+			border-left: 1px solid #444;
+		}
+		
+		.sub-menu-trigger i {
+			color: #fff;
+		}
+		
+		/* 2nd Tier */
+		
+		.sub-menu .sub-menu-trigger {
+			background: #292929;
+		}
+		
+		/* Nav Trigger
+		---------------------------------------- */
+		
+		.nav-trigger {
+			margin-right: -30px;
+		}
+		
+		.nav-trigger i {
+			color: #333;
+		}
 	
-	/* Sub Menu Trigger
-	---------------------------------------- */
-	
-	.mobile-nav .sub-menu-trigger {
-		border-left: 1px solid #444;
-	}
-	
-	.mobile-nav .sub-menu-trigger i {
-		color: #fff;
-	}
-	
-	/* 2nd Tier */
-	
-	.mobile-nav .sub-menu .sub-menu-trigger {
-		background: #292929;
-	}
-	
-	/* Nav Trigger
-	---------------------------------------- */
-	
-	.mobile-nav .nav-trigger {
-		margin-right: -30px;
-	}
-	
-	.mobile-nav .nav-trigger i {
-		color: #333;
 	}
 
 /*=============================================================================

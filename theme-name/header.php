@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js desktop-nav">
+<html <?php language_attributes(); ?> class="no-js">
 <head>
 
 	<meta charset="<?php bloginfo('charset'); ?>">
@@ -19,23 +19,23 @@
 	
 </head>
 <body <?php body_class(); ?>>
-
-	<header class="header">
 	
-		<div class="wrap group">
+	<?php get_template_part('partials/menu/mobile-menu'); ?>
+	
+	<div class="body-wrapper js-body-wrapper">
+
+		<header class="header">
 		
-			<a class="logo" href="<?php echo home_url(); ?>">
-				<!--<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo('name'); ?>">-->
-			</a>
+			<div class="wrap group">
 			
-			<nav class="main-nav js-nav">
-				<?php main_nav(); ?>
-			</nav>
+				<a class="logo" href="<?php echo home_url(); ?>">
+					<!--<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo('name'); ?>">-->
+				</a>
+				
+				<?php get_template_part('partials/menu/desktop-menu'); ?>
+				
+				<?php get_template_part('partials/menu/mobile-menu-trigger'); ?>
 			
-			<div class="nav-trigger js-nav-trigger">
-				<i class="fa fa-bars"></i>
 			</div>
 		
-		</div>
-	
-	</header>
+		</header>

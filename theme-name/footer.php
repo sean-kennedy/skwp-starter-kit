@@ -1,12 +1,14 @@
-	<footer class="footer">
-	
-		<div class="wrap group">
+		<footer class="footer">
 		
-			<p class="copyright">&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.</p>
+			<div class="wrap group">
+			
+				<p class="copyright">&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.</p>
+			
+			</div>
+			
+		</footer>
 		
-		</div>
-		
-	</footer>
+	</div>
 	
 	<!-- JS -->
 	<?php wp_footer(); ?>

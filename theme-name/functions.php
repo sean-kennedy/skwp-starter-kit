@@ -197,7 +197,7 @@
 				'after'           => '',
 				'link_before'     => '',
 				'link_after'      => '',
-				'items_wrap'      => '<ul class="js-nav-list nav-list group">%3$s</ul>',
+				'items_wrap'      => '<ul class="nav-list group">%3$s</ul>',
 				'depth'           => 0,
 				'walker'          => new Exclude_Unpublished
 			));

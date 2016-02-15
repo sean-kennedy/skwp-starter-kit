@@ -1,12 +1,12 @@
 (function() {
 	
 	// Responsive Menu
-	$('.js-nav-list').responsiveMenu();
+	$('.js-desktop-nav').responsiveMenu();
 	
 	// iCheck
-	$('input').iCheck();
+	//$('input').iCheck();
 	
 	// Heapbox
-	$('select').heapbox();
+	//$('select').heapbox();
 
 })();
