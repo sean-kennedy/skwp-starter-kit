@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?>>
 <head>
 
 	<meta charset="<?php bloginfo('charset'); ?>">
