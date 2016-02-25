@@ -59,6 +59,58 @@
 /*
  * ========================================================================
  *
+ *	Disable Wordpress embeds added in 4.4 (credit: https://wordpress.org/plugins/disable-embeds/)
+ *
+ * ========================================================================
+ */
+ 
+	add_action('init', 'skwp_disable_embeds', 9999);
+		
+	function skwp_disable_embeds() {
+	
+		global $wp;
+	
+		$wp->public_query_vars = array_diff($wp->public_query_vars, array('embed'));
+	
+		add_filter('embed_oembed_discover', '__return_false');
+		add_filter('tiny_mce_plugins', 'disable_embeds_tiny_mce_plugin');
+	
+		remove_action('wp_head', 'wp_oembed_add_discovery_links');
+		remove_action('wp_head', 'wp_oembed_add_host_js');
+		remove_action('rest_api_init', 'wp_oembed_register_route');
+		remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
+		
+		function disable_embeds_tiny_mce_plugin($plugins) {
+			
+			return array_diff($plugins, array('wpembed'));
+			
+		}
+		
+	}
+	
+/*
+ * ========================================================================
+ *
+ *	Disable Wordpress rest API added in 4.4
+ *
+ * ========================================================================
+ */
+ 
+	add_action('init', 'skwp_disable_rest_api');
+		
+	function skwp_disable_rest_api() {
+		
+		add_filter('rest_enabled', '__return_false');
+		add_filter('rest_jsonp_enabled', '__return_false');
+ 
+		remove_action('wp_head', 'rest_output_link_wp_head');
+		remove_action('template_redirect', 'rest_output_link_header', 11);
+			
+	}
+	
+/*
+ * ========================================================================
+ *
  *	Move Yoast SEO metabox to the bottom of the page
  *
  * ========================================================================
