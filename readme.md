@@ -16,16 +16,17 @@ define('FS_METHOD', 'direct');
 Install Plugins:
 
 - Advanced Custom Fields Pro
+- Advanced Custom Fields: Image Crop Add-on
 - ACF-Content Analysis for Yoast SEO
 - Advanced Custom Fields: Link Picker
 - Autoptimize (minification)
 - CMS Tree Page View
 - Disable Comments
+- Enable Media Replace
 - Gravity Forms
 - iThemes Security
 - Optimize Database after Deleting Revisions
 - Relevanssi - Add search logging excluding master
-- RICG Responsive Images
 - SO Hide SEO Bloat
 - Velvet Blues Update URLs
 - Yoast SEO - Import settings or setup as per http://onlinemediamasters.com/yoast-wordpress-seo-tutorial/
@@ -49,8 +50,3 @@ After Launch:
 ### SmoothState.js
 
 Download and enqueue the latest smoothState.js and smoothState.css in functions.php. Incorporate js, css, footer.php and header.php files from `smoothstate-theme` folder into main theme folder.
-
-### TODO:
-
-- Refactor print styles
-- Add accordion and tab bar default JS + CSS (Shortcode)
