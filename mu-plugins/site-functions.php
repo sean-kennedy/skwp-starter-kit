@@ -20,6 +20,50 @@
 
 	add_filter('comments_open', '__return_false');
 	add_filter('pings_open', '__return_false');
+	
+/*
+ * ========================================================================
+ *
+ *	Featured image in RSS feed
+ *
+ * ========================================================================
+ */
+	
+    add_filter('the_content_feed', 'skwp_featured_image_in_feed');
+    add_filter('the_excerpt_rss', 'skwp_featured_image_in_feed' );
+    
+    function skwp_featured_image_in_feed($content) {
+        
+        global $post;
+            
+        if (has_post_thumbnail($post->ID)) {
+            $output = get_the_post_thumbnail($post->ID, 'full', array('style' => 'float:right; margin:0 0 10px 10px;'));
+            $content = $output . $content;
+        }
+        
+        return $content;
+        
+    }
+    
+/*
+ * ========================================================================
+ *
+ *  Optimise RSS for Feedly
+ *
+ * ========================================================================
+ */
+    
+    add_filter('rss2_ns', 'skwp_optimise_feedly');
+    
+    function skwp_optimise_feedly() {
+        echo 'xmlns:webfeeds="http://webfeeds.org/rss/1.0"';
+    }
+    
+    add_filter('rss2_head', 'skwp_feedly_head');
+    
+    function skwp_feedly_head() {
+        echo '<webfeeds:accentColor>#64a0c8</webfeeds:accentColor>';
+    }
 
 /*
  * ========================================================================
