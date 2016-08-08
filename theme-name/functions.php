@@ -235,7 +235,7 @@
 	    if (!is_admin()) {
 	    
 	        wp_deregister_script('jquery');
-			wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js', array(), '1.12.0', true);
+			wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js', array(), '3.1.0', true);
 	        
 	        wp_register_script('menu', get_template_directory_uri() . '/js/menu.js', array('jquery'), '1.0.0', true);
 	        
@@ -254,14 +254,16 @@
 	add_action('wp_enqueue_scripts', 'skwp_enqueue_styles');
 	
 	function skwp_enqueue_styles() {
+    	
+    	wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '4.1.1', 'all');
 	
-	    wp_register_style('defaults', get_template_directory_uri() . '/css/defaults.css', array(), '1.0', 'all');
+	    wp_register_style('defaults', get_template_directory_uri() . '/css/defaults.css', array(), '1.0.0', 'all');
 	    
-	    wp_register_style('menu', get_template_directory_uri() . '/css/menu.css', array(), '1.0', 'all');
+	    wp_register_style('menu', get_template_directory_uri() . '/css/menu.css', array(), '1.0.0', 'all');
 	    
-	    wp_register_style('forms-css', get_template_directory_uri() . '/css/forms.css', array(), '1.0', 'all');
+	    wp_register_style('forms-css', get_template_directory_uri() . '/css/forms.css', array(), '1.0.0', 'all');
 	    
-	    wp_register_style('style', get_stylesheet_uri(), array('defaults', 'menu', 'forms-css'), '1.0', 'all');
+	    wp_register_style('style', get_stylesheet_uri(), array('normalize', 'defaults', 'menu', 'forms-css'), '1.0.0', 'all');
 	    wp_enqueue_style('style');
 	    
 	}
