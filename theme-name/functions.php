@@ -239,9 +239,9 @@
 	        
 	        wp_register_script('menu', get_template_directory_uri() . '/js/menu.js', array('jquery'), '1.0.0', true);
 	        
-	        wp_register_script('forms', get_template_directory_uri() . '/js/forms.js', array('jquery'), '1.0.0', true);
+	        wp_register_script('forms-js', get_template_directory_uri() . '/js/forms.js', array('jquery'), '1.0.0', true);
 	
-	        wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery', 'menu', 'forms'), '1.0.0', true);
+	        wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery', 'menu', 'forms-js'), '1.0.0', true);
 	        wp_enqueue_script('scripts');
 	        
 	    }
@@ -259,9 +259,9 @@
 	    
 	    wp_register_style('menu', get_template_directory_uri() . '/css/menu.css', array(), '1.0', 'all');
 	    
-	    wp_register_style('forms', get_template_directory_uri() . '/css/forms.css', array(), '1.0', 'all');
+	    wp_register_style('forms-css', get_template_directory_uri() . '/css/forms.css', array(), '1.0', 'all');
 	    
-	    wp_register_style('style', get_stylesheet_uri(), array('defaults', 'menu', 'forms'), '1.0', 'all');
+	    wp_register_style('style', get_stylesheet_uri(), array('defaults', 'menu', 'forms-css'), '1.0', 'all');
 	    wp_enqueue_style('style');
 	    
 	}
