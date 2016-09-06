@@ -154,16 +154,12 @@
 		}
 		
 		.body-content > ul li:before {
-			font-family: 'FontAwesome';
-			content: '\f0da';
+			content: "\2014 ";
 			display: block;
 			position: relative;
+			left: -20px;
 			max-height: 0;
 			max-width: 0;
-			left: -20px;
-			top: -1px;
-			font-size: 1.1em;
-			color: #00adef;
 		}
 		
 		/* Ordered List (ol) */
