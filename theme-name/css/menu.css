@@ -42,7 +42,7 @@
 			top: 100%;
 			left: 0;
 			z-index: 99;
-			min-width: 12em;
+			min-width: 15em;
 		}
 		
 		.nav-list li {
@@ -152,7 +152,8 @@
 		---------------------------------------- */
 		
 		.mobile-nav {
-			display: none;
+    		opacity: 0;
+    		display: block;
 			position: fixed;
 			width: 250px;
 			height: 100%;
@@ -161,6 +162,8 @@
 			overflow-x: hidden;
 			overflow-y: scroll;
 			z-index: 1;
+			-webkit-transition-delay: 0.15s;
+			transition-delay: 0.15s;
 		}
 		
 		.body-wrapper {
@@ -178,7 +181,9 @@
 		}
 		
 		body.nav-open .mobile-nav {
-			display: block;
+    		opacity: 1;
+    		-webkit-transition-delay: 0s;
+    		transition-delay: 0s;
 		}
   
 		/* Essential Positioning Styles
@@ -195,6 +200,7 @@
 		
 		.nav-list a {
 			display: block;
+			position: relative;
 		}
 			
 		.nav-list .sub-menu {
@@ -214,7 +220,7 @@
 			position: absolute;
 			left: 0;
 			top: 0;
-			height: 54px;
+			height: 100%;
 		}
 		
 		/* Sub Menu Trigger
@@ -225,16 +231,19 @@
 			top: 0;
 			right: 0;
 			width: 54px;
-			height: 54px;
+			height: 100%;
 			text-align: center;
 			font-size: 1.7em;
 			cursor: pointer;
+			z-index: 25;
 		}
 		
 		.sub-menu-trigger i {
 			position: relative;
-			top: 14px;
 			left: 3px;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
 		}
 		
 	/*=============================================================================

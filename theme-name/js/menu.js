@@ -65,13 +65,14 @@
 				body.toggleClass('nav-open');
 			});
 			
-			$('.js-mobile-nav .menu-item-has-children').prepend('<div class="sub-menu-trigger"><i class="fa fa-angle-down"></i></div>');
+			$('.js-mobile-nav .menu-item-has-children > a').append('<div class="sub-menu-trigger"><i class="fa fa-angle-down"></i></div>');
 			$('.js-mobile-nav > ul .current-menu-ancestor > .sub-menu').slideToggle(0);
-			$('.current-menu-ancestor > .sub-menu-trigger').find('i').toggleClass('fa-angle-down').toggleClass('fa-angle-up');
+			$('.current-menu-ancestor > a > .sub-menu-trigger').find('i').toggleClass('fa-angle-down').toggleClass('fa-angle-up');
 			
-			$(document).on('click', '.sub-menu-trigger', function(){
+			$(document).on('click', '.sub-menu-trigger', function(e){
+    			e.preventDefault();
 				$(this).find('i').toggleClass('fa-angle-down').toggleClass('fa-angle-up');
-				$(this).next().next('.sub-menu').slideToggle(250);
+				$(this).parent().next('.sub-menu').slideToggle(250);
 			});
 			
 		}
