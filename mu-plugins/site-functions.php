@@ -198,8 +198,80 @@
 		echo '<style>
 		.acf-field {
 			max-width: none;
-		} 
+		}
+        .wpseo-tab-video-container__handle,
+        .wpseo-metabox-buy-premium {
+            display: none;
+        }
+        
+        .wpseo-metabox-sidebar li.active span {
+            border-color: transparent;
+        }
+        
+        .wpseo-metabox-sidebar li span {
+            margin-left:-8px;
+        }
 		</style>';
+	}
+	
+/*
+ * ========================================================================
+ *
+ *	Redirect Pages top-level menu item to tree view
+ *
+ * ========================================================================
+ */
+	
+	//add_action('admin_footer', 'skwp_menu_links_js');
+	
+	function skwp_menu_links_js() {
+		echo '<script>
+            jQuery("#menu-pages > a").attr("href", "/wp-admin/edit.php?post_type=page&page=cms-tpv-page-page");
+		</script>';
+	}
+	
+/*
+ * ========================================================================
+ *
+ *	ACF: Hide page layouts custom rules
+ *
+ * ========================================================================
+ */
+		 
+	//add_action('admin_footer', 'skwp_custom_acf_js');
+	
+	function skwp_custom_acf_js() {
+		echo '<script>
+		
+        var fieldGroups = [
+            {
+                "trigger": "acf-field_XXXXXXXXXXXXX-X",
+                "field": "acf-group_XXXXXXXXXXXXX-X"
+            }
+        ];
+        
+        fieldGroups.forEach(function(fieldGroup) {
+           eventBinder(fieldGroup.trigger, fieldGroup.field);
+        });
+        
+        function eventBinder(trigger, field) {
+            (function() {
+                var $trigger = jQuery("#" + trigger),
+                    $field = jQuery("#" + field);
+                
+                $trigger.on("click", function() {
+                    checkStatus($trigger, $field);
+                });
+                
+                checkStatus($trigger, $field);
+            })();
+        }
+        
+        function checkStatus($trigger, $field) {
+            $trigger.is(":checked") ? $field.addClass("active") : $field.removeClass("active");
+        }
+		
+		</script>';
 	}
 	
 /*
