@@ -259,11 +259,13 @@
 	
 	    wp_register_style('defaults', get_template_directory_uri() . '/css/defaults.css', array(), '1.0.0', 'all');
 	    
+	    wp_register_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '1.0.0', 'all');
+	    
 	    wp_register_style('menu', get_template_directory_uri() . '/css/menu.css', array(), '1.0.0', 'all');
 	    
-	    wp_register_style('forms-css', get_template_directory_uri() . '/css/forms.css', array(), '1.0.0', 'all');
+	    wp_register_style('forms-css', get_template_directory_uri() . '/css/forms.css', array(), '4.7.0', 'all');
 	    
-	    wp_register_style('style', get_stylesheet_uri(), array('normalize', 'defaults', 'menu', 'forms-css'), '1.0.0', 'all');
+	    wp_register_style('style', get_stylesheet_uri(), array('normalize', 'defaults', 'fontawesome', 'menu', 'forms-css'), '1.0.0', 'all');
 	    wp_enqueue_style('style');
 	    
 	}
