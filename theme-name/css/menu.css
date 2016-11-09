@@ -84,11 +84,6 @@
 		
 		/* Global */
 		
-		/* Fixes IE11 bug with list-style:none; being ignored. */
-		.sf-arrows li {
-		    list-style-image: url(data:0);
-		}
-		
 		.sf-arrows .sf-with-ul {
 			padding-right: 30px;
 		}
